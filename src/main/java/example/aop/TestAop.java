@@ -28,7 +28,7 @@ public class TestAop {
     private Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         //System.out.println(obj);
         joinPoint.getArgs();//获取方法的入参
-       // joinPoint.get
+        Object target = joinPoint.getTarget();//代理的对象
         System.out.println("around");
         return joinPoint.proceed();//执行本来要执行的方法，不调用程序不走下去
     }
