@@ -10,6 +10,7 @@ public class HelloController {
     @MyAnnotation
     @RequestMapping("/hello")
     public String hello(){
+        System.out.println(1111);
         return "hello";
     }
 }

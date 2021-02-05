@@ -25,8 +25,9 @@ public class TestAop {
     }
 
     @Around("pointcut()")
-    private void around(){
+    private Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("around");
+        return joinPoint.proceed();
     }
 
     @After("pointcut()")
